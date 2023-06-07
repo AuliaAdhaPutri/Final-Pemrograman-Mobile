@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.detailMovie">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/baseline_arrow_circle_left_24"
+                android:padding="5dp"
+                android:translationZ="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/foto1"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:alpha="0.9"
+                android:scaleType="fitXY"
+
+                android:src="@drawable/foto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/card"
+                android:layout_width="140dp"
+                android:layout_height="190dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="180dp"
+                android:background="@drawable/foto"
+                android:elevation="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_fav"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/baseline_favorite_border_24"
+                android:backgroundTint="@color/white"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/card1"
+                android:layout_width="210dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="220dp"
+                android:background="#EAE6E6"
+                android:elevation="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="190dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/card">
+
+                <TextView
+                    android:id="@+id/judulmovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Frozen 2"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="150dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/card">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_star_24"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ratemovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:text="8.8"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/movie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="90dp"
+                    android:src="@drawable/baseline_movie_creation_24"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="5dp"
+                app:layout_constraintTop_toBottomOf="@id/card">
+
+                <TextView
+                    android:id="@+id/synopsistv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Synopsis"
+                    android:textStyle="bold"
+                    android:fontFamily="serif"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/desk_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:text="desripsi film ada disini"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
