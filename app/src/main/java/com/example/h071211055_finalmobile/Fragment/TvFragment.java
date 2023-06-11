@@ -55,22 +55,18 @@ public class TvFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_movie, container, false);
+        View view = inflater.inflate(R.layout.fragment_tv, container, false);
 
-        return view;
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+        progressBar = view.findViewById(R.id.pb_tv);
         disconnect = view.findViewById(R.id.tv_disconnect);
         recyclerView = view.findViewById(R.id.rv_tv);
-        progressBar = view.findViewById(R.id.pb_tv);
 
         handler = new Handler();
 
         loading();
         getDataApi();
+
+        return view;
     }
 
     private void getDataApi() {
@@ -93,10 +89,10 @@ public class TvFragment extends Fragment {
                             GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
                             recyclerView.setLayoutManager(layoutManager);
                         } else {
-                            Log.e("MovieFragment", "onResponse: Response body is null");
+                            Log.e("TvFragment", "onResponse: Response body is null");
                         }
                     } else {
-                        Log.e("MovieFragment", "onResponse: Response is not successful");
+                        Log.e("TvFragment", "onResponse: Response is not successful");
                     }
                 }
 

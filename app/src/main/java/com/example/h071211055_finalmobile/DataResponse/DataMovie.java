@@ -10,5 +10,9 @@ public class DataMovie {
     private List<Movie>  dataMovie;
     public List<Movie> getDataMovie() { return dataMovie; }
 
+//    @SerializedName("id")
+//    private Movie data;
+//    public Movie getData() { return data; }
+
 
 }

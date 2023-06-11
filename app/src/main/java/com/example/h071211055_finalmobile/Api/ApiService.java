@@ -5,13 +5,17 @@ import com.example.h071211055_finalmobile.DataResponse.DataTv;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface ApiService {
 
-    @GET("tv/airing_today?")
+    @GET("tv/airing_today")
     Call<DataTv> getDataTv(@Query("api_key") String apiKey);
 
-    @GET("movie/now_playing?")
+    @GET("movie/now_playing")
     Call<DataMovie> getDataMovie(@Query("api_key") String apiKey);
+
+
+
 }

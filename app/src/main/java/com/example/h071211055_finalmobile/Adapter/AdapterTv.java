@@ -59,8 +59,8 @@ public class AdapterTv extends RecyclerView.Adapter<AdapterTv.ViewHolder> {
                 .load(poster)
                 .into(holder.Picture);
         holder.itemView.setOnClickListener(view -> {
-            Intent intent = new Intent(holder.itemView.getContext(), detailMovie.class);
-            intent.putExtra("data", tv);
+            Intent intent = new Intent(holder.itemView.getContext(), detailTv.class);
+            intent.putExtra("datatv", tv);
             holder.itemView.getContext().startActivity(intent);
         });
     }

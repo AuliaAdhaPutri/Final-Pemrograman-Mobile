@@ -13,8 +13,9 @@ public class Movie implements Parcelable {
     @SerializedName("poster_path") private String poster_path;
     @SerializedName("release_date") private String release_date;
     @SerializedName("vote_average") private String vote_average;
+    @SerializedName(" backdrop_path") private String  backdrop_path;
     @SerializedName("overview") private String overview;
-    @SerializedName("original_title") private String original_title;
+    @SerializedName("title") private String title;
 
     protected Movie(Parcel in) {
         id = in.readString();
@@ -23,7 +24,7 @@ public class Movie implements Parcelable {
         release_date = in.readString();
         vote_average = in.readString();
         overview = in.readString();
-        original_title = in.readString();
+        title = in.readString();
     }
 
     public static final Creator<Movie> CREATOR = new Creator<Movie>() {
@@ -62,8 +63,44 @@ public class Movie implements Parcelable {
         return overview;
     }
 
-    public String getOriginal_title() {
-        return original_title;
+    public String getTitle() {
+        return title;
+    }
+
+    public String getBackdrop_path() {
+        return backdrop_path;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setOriginal_language(String original_language) {
+        this.original_language = original_language;
+    }
+
+    public void setPoster_path(String poster_path) {
+        this.poster_path = poster_path;
+    }
+
+    public void setRelease_date(String release_date) {
+        this.release_date = release_date;
+    }
+
+    public void setVote_average(String vote_average) {
+        this.vote_average = vote_average;
+    }
+
+    public void setBackdrop_path(String backdrop_path) {
+        this.backdrop_path = backdrop_path;
+    }
+
+    public void setOverview(String overview) {
+        this.overview = overview;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     @Override
@@ -79,7 +116,7 @@ public class Movie implements Parcelable {
         dest.writeString(release_date);
         dest.writeString(vote_average);
         dest.writeString(overview);
-        dest.writeString(original_title);
+        dest.writeString(title);
     }
 
     //    "id": 713704,

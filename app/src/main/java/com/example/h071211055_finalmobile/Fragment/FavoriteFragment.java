@@ -18,11 +18,6 @@ public class FavoriteFragment extends Fragment {
 
     }
 
-    // TODO: Rename and change types and number of parameters
-    public static MovieFragment newInstance(String param1, String param2) {
-        return null;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

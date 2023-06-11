@@ -7,6 +7,6 @@ import java.util.List;
 public class DataTv {
     @SerializedName("results")
 
-    private List<Tv> results;
-    public List<Tv> getDataTv() { return results; }
+    private List<Tv> dataTv;
+    public List<Tv> getDataTv() { return dataTv; }
 }

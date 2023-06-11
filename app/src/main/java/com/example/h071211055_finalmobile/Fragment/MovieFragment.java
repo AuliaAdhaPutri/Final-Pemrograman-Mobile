@@ -9,27 +9,21 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Handler;
-import android.os.Looper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.h071211055_finalmobile.Adapter.AdapterMovie;
-import com.example.h071211055_finalmobile.Adapter.AdapterTv;
 import com.example.h071211055_finalmobile.Api.ApiConfig;
 import com.example.h071211055_finalmobile.DataResponse.DataMovie;
-import com.example.h071211055_finalmobile.DataResponse.DataTv;
 import com.example.h071211055_finalmobile.DataResponse.Movie;
-import com.example.h071211055_finalmobile.DataResponse.Tv;
 import com.example.h071211055_finalmobile.R;
 
 import java.util.ArrayList;
@@ -45,6 +39,7 @@ public class MovieFragment extends Fragment {
     private ProgressBar progressBar;
     private TextView disconnect;
     private RecyclerView recyclerView;
+
     private Handler handler;
 
     public static ArrayList<Movie> dataFilm1 = new ArrayList<>();
@@ -57,6 +52,7 @@ public class MovieFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_movie, container, false);
 
+
         return view;
     }
 
@@ -67,10 +63,14 @@ public class MovieFragment extends Fragment {
         recyclerView = view.findViewById(R.id.rv_movie);
         progressBar = view.findViewById(R.id.pb_movie);
 
+
         handler = new Handler();
+
 
         loading();
         getDataApi();
+
+
     }
 
     private void getDataApi() {
@@ -102,7 +102,7 @@ public class MovieFragment extends Fragment {
 
                 @Override
                 public void onFailure(Call<DataMovie> call, Throwable t) {
-                    Toast.makeText(getActivity(), "Unable to fetch data!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity()," Datanya menolak ", Toast.LENGTH_SHORT).show();
                 }
             });
         } else {
@@ -152,4 +152,6 @@ public class MovieFragment extends Fragment {
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         return networkInfo != null && networkInfo.isConnected();
     }
+
+
 }
