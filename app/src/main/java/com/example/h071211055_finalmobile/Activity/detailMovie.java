@@ -1,14 +1,12 @@
 package com.example.h071211055_finalmobile.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.bumptech.glide.Glide;
 import com.example.h071211055_finalmobile.DataResponse.Movie;
 import com.example.h071211055_finalmobile.R;
@@ -22,6 +20,8 @@ public class detailMovie extends AppCompatActivity {
     private TextView Date;
     private TextView synopsis;
     private TextView desk_movie;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,8 @@ public class detailMovie extends AppCompatActivity {
         rate = findViewById(R.id.ratemovie);
         synopsis = findViewById(R.id.sinop);
         desk_movie = findViewById(R.id.desk_movie);
+
+
 
         // Mengambil data film dari intent
         Intent intent = getIntent();
@@ -55,6 +57,7 @@ public class detailMovie extends AppCompatActivity {
                 Glide.with(this)
                         .load(posterPath)
                         .into(Foto2);
+
             } else {
                 Toast.makeText(this, "Failed to get movie details", Toast.LENGTH_SHORT).show();
             }
@@ -64,6 +67,6 @@ public class detailMovie extends AppCompatActivity {
     }
 
     public void back(View view) {
-        finish(); // Kembali ke aktivitas sebelumnya
+        finish();
     }
 }

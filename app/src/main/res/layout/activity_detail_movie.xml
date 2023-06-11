@@ -51,6 +51,7 @@
             android:id="@+id/icon_fav"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:onClick="toggleFavorite"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:background="@drawable/baseline_favorite_border_24"
